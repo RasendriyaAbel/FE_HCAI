@@ -352,3 +352,59 @@
   }
 }
 
+@media (max-width: 768px) {
+  .profile-page {
+    gap: 1.5rem;
+  }
+
+  .profile-title {
+    font-size: 1.5rem;
+  }
+
+  .profile-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .auto-fill-section {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .auto-fill-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-section {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .profile-sidebar {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-title {
+    font-size: 1.25rem;
+  }
+
+  .auto-fill-section,
+  .profile-section {
+    padding: 1.25rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+  }
+}
+

@@ -57,3 +57,40 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: #3a4555;
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  a {
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Prevent text selection on UI elements */
+button,
+.nav-item {
+  user-select: none;
+  -webkit-user-select: none;
+}

@@ -353,3 +353,91 @@
   }
 }
 
+@media (max-width: 768px) {
+  .dashboard {
+    gap: 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .job-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .job-card {
+    padding: 1.25rem;
+  }
+
+  .job-title {
+    font-size: 1rem;
+  }
+
+  .job-company {
+    font-size: 0.85rem;
+  }
+
+  .application-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .application-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .application-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-sidebar {
+    gap: 1rem;
+  }
+
+  .profile-completion-card,
+  .notifications-card,
+  .next-steps-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.25rem;
+  }
+
+  .job-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .match-badge {
+    align-self: flex-start;
+  }
+}
+

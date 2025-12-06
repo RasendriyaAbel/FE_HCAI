@@ -325,3 +325,88 @@
   }
 }
 
+@media (max-width: 768px) {
+  .job-detail-page {
+    padding: 1rem;
+  }
+
+  .breadcrumbs {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-detail-main {
+    padding: 1.5rem;
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+  }
+
+  .job-company-location {
+    font-size: 1rem;
+  }
+
+  .job-tabs {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .job-tab {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .section-heading {
+    font-size: 1.25rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+  }
+
+  .job-detail-sidebar {
+    gap: 1.25rem;
+  }
+
+  .action-buttons {
+    gap: 0.75rem;
+  }
+
+  .apply-btn,
+  .save-job-btn {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-detail-page {
+    padding: 0.75rem;
+  }
+
+  .job-title {
+    font-size: 1.25rem;
+  }
+
+  .job-tags {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .job-tab {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .section-heading {
+    font-size: 1.1rem;
+  }
+
+  .company-card,
+  .job-details-card,
+  .share-card {
+    padding: 1.25rem;
+  }
+}
+

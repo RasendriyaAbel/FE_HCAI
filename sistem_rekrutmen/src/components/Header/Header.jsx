@@ -1,12 +1,16 @@
-import { Search, Bell, User } from 'lucide-react';
+import { Search, Bell, User, Menu } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onMenuClick }) => {
   const { user } = useAuth();
 
   return (
     <header className="header">
+      <button className="mobile-menu-btn" onClick={onMenuClick}>
+        <Menu className="menu-icon" />
+      </button>
+      
       <div className="header-search">
         <Search className="search-icon" />
         <input
@@ -37,4 +41,3 @@ const Header = () => {
 };
 
 export default Header;
-

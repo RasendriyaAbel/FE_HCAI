@@ -120,3 +120,60 @@
   background-color: var(--accent-blue-hover);
 }
 
+@media (max-width: 768px) {
+  .applications-page {
+    padding: 0 0.5rem;
+  }
+
+  .applications-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .application-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .application-actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .view-status-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.25rem;
+  }
+
+  .application-title {
+    font-size: 1.1rem;
+  }
+
+  .application-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .view-status-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

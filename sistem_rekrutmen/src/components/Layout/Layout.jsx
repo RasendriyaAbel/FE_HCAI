@@ -1,14 +1,28 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Header from '../Header/Header';
 import './Layout.css';
 
 const Layout = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <div className="layout">
-      <Sidebar />
+      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
+      {sidebarOpen && (
+        <div className="sidebar-overlay" onClick={closeSidebar}></div>
+      )}
       <div className="layout-main">
-        <Header />
+        <Header onMenuClick={toggleSidebar} />
         <main className="layout-content">
           <Outlet />
         </main>
@@ -18,4 +32,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
