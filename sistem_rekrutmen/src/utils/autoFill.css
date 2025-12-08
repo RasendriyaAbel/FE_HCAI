@@ -1,0 +1,31 @@
+/* Auto-fill indicator untuk testing/prototype */
+.form-input:not(:disabled):hover,
+.form-textarea:not(:disabled):hover {
+  cursor: text;
+  position: relative;
+}
+
+.form-input:not(:disabled):empty::after,
+.form-textarea:not(:disabled):empty::after {
+  content: '💡 Click to auto-fill';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: var(--accent-blue);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.form-input:not(:disabled):empty:hover::after,
+.form-textarea:not(:disabled):empty:hover::after {
+  opacity: 0.6;
+}
+
+.form-input:not(:disabled):focus:empty::after,
+.form-textarea:not(:disabled):focus:empty::after {
+  opacity: 0;
+}
+

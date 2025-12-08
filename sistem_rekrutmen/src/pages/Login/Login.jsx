@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, Navigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, Briefcase } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { createAutoFillHandler } from '../../utils/autoFill';
 import './Login.css';
 
 const Login = () => {
@@ -33,6 +34,10 @@ const Login = () => {
       }));
     }
   };
+
+  // Auto-fill handlers untuk testing/prototype
+  const autoFillEmail = createAutoFillHandler('email', setFormData);
+  const autoFillPassword = createAutoFillHandler('password', setFormData);
 
   const validateForm = () => {
     const newErrors = {};
@@ -94,6 +99,8 @@ const Login = () => {
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleChange}
+                onClick={autoFillEmail}
+                onFocus={autoFillEmail}
               />
             </div>
             {errors.email && <span className="error-message">{errors.email}</span>}
@@ -113,6 +120,8 @@ const Login = () => {
                 placeholder="Enter your password"
                 value={formData.password}
                 onChange={handleChange}
+                onClick={autoFillPassword}
+                onFocus={autoFillPassword}
               />
               <button
                 type="button"

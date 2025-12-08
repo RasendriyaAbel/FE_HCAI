@@ -13,6 +13,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { createAutoFillHandler } from '../../utils/autoFill';
 import './ApplyJob.css';
 
 const ApplyJob = () => {
@@ -59,6 +60,16 @@ const ApplyJob = () => {
       }));
     }
   };
+
+  // Auto-fill handlers untuk testing/prototype
+  const autoFillFullName = createAutoFillHandler('fullName', setFormData);
+  const autoFillEmail = createAutoFillHandler('email', setFormData);
+  const autoFillPhone = createAutoFillHandler('phone', setFormData);
+  const autoFillAddress = createAutoFillHandler('address', setFormData);
+  const autoFillCoverLetter = createAutoFillHandler('coverLetter', setFormData);
+  const autoFillLinkedin = createAutoFillHandler('linkedin', setFormData);
+  const autoFillPortfolio = createAutoFillHandler('portfolio', setFormData);
+  const autoFillExpectedSalary = createAutoFillHandler('expectedSalary', setFormData);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -223,6 +234,8 @@ const ApplyJob = () => {
                     placeholder="Enter your full name"
                     value={formData.fullName}
                     onChange={handleChange}
+                    onClick={autoFillFullName}
+                    onFocus={autoFillFullName}
                   />
                   {errors.fullName && (
                     <span className="error-message">{errors.fullName}</span>
@@ -242,6 +255,8 @@ const ApplyJob = () => {
                     placeholder="Enter your email"
                     value={formData.email}
                     onChange={handleChange}
+                    onClick={autoFillEmail}
+                    onFocus={autoFillEmail}
                   />
                   {errors.email && (
                     <span className="error-message">{errors.email}</span>
@@ -261,6 +276,8 @@ const ApplyJob = () => {
                     placeholder="Enter your phone number"
                     value={formData.phone}
                     onChange={handleChange}
+                    onClick={autoFillPhone}
+                    onFocus={autoFillPhone}
                   />
                   {errors.phone && (
                     <span className="error-message">{errors.phone}</span>
@@ -280,6 +297,8 @@ const ApplyJob = () => {
                     placeholder="Enter your address"
                     value={formData.address}
                     onChange={handleChange}
+                    onClick={autoFillAddress}
+                    onFocus={autoFillAddress}
                   />
                   {errors.address && (
                     <span className="error-message">{errors.address}</span>
@@ -344,6 +363,8 @@ const ApplyJob = () => {
                   rows={8}
                   value={formData.coverLetter}
                   onChange={handleChange}
+                  onClick={autoFillCoverLetter}
+                  onFocus={autoFillCoverLetter}
                 />
                 <div className="char-count">
                   {formData.coverLetter.length} characters
@@ -375,6 +396,8 @@ const ApplyJob = () => {
                     placeholder="https://linkedin.com/in/yourprofile"
                     value={formData.linkedin}
                     onChange={handleChange}
+                    onClick={autoFillLinkedin}
+                    onFocus={autoFillLinkedin}
                   />
                 </div>
 
@@ -390,6 +413,8 @@ const ApplyJob = () => {
                     placeholder="https://yourportfolio.com"
                     value={formData.portfolio}
                     onChange={handleChange}
+                    onClick={autoFillPortfolio}
+                    onFocus={autoFillPortfolio}
                   />
                 </div>
 
@@ -405,6 +430,8 @@ const ApplyJob = () => {
                     placeholder="e.g., Rp 20jt - Rp 25jt"
                     value={formData.expectedSalary}
                     onChange={handleChange}
+                    onClick={autoFillExpectedSalary}
+                    onFocus={autoFillExpectedSalary}
                   />
                 </div>
 

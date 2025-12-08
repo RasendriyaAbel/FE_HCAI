@@ -11,6 +11,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { createAutoFillHandler } from '../../utils/autoFill';
 import './Register.css';
 
 const Register = () => {
@@ -47,6 +48,13 @@ const Register = () => {
       }));
     }
   };
+
+  // Auto-fill handlers untuk testing/prototype
+  const autoFillFullName = createAutoFillHandler('fullName', setFormData);
+  const autoFillEmail = createAutoFillHandler('email', setFormData);
+  const autoFillPhone = createAutoFillHandler('phone', setFormData);
+  const autoFillPassword = createAutoFillHandler('password', setFormData);
+  const autoFillConfirmPassword = createAutoFillHandler('confirmPassword', setFormData);
 
   const validateForm = () => {
     const newErrors = {};
@@ -149,6 +157,8 @@ const Register = () => {
                 placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleChange}
+                onClick={autoFillFullName}
+                onFocus={autoFillFullName}
               />
             </div>
             {errors.fullName && (
@@ -170,6 +180,8 @@ const Register = () => {
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleChange}
+                onClick={autoFillEmail}
+                onFocus={autoFillEmail}
               />
             </div>
             {errors.email && <span className="error-message">{errors.email}</span>}
@@ -189,6 +201,8 @@ const Register = () => {
                 placeholder="Enter your phone number"
                 value={formData.phone}
                 onChange={handleChange}
+                onClick={autoFillPhone}
+                onFocus={autoFillPhone}
               />
             </div>
             {errors.phone && <span className="error-message">{errors.phone}</span>}
@@ -208,6 +222,8 @@ const Register = () => {
                 placeholder="Create a password"
                 value={formData.password}
                 onChange={handleChange}
+                onClick={autoFillPassword}
+                onFocus={autoFillPassword}
               />
               <button
                 type="button"
@@ -255,6 +271,8 @@ const Register = () => {
                 placeholder="Confirm your password"
                 value={formData.confirmPassword}
                 onChange={handleChange}
+                onClick={autoFillConfirmPassword}
+                onFocus={autoFillConfirmPassword}
               />
               <button
                 type="button"

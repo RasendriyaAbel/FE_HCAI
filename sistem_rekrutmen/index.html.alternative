@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#0f1419" />
+    <meta name="description" content="Sistem Rekrutmen Digital - Job Portal" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Job Portal - Sistem Rekrutmen Digital</title>
+    
+    <!-- Mida Script for A/B Testing -->
+    <!-- Opsi 2: Menggunakan script tag langsung di HTML -->
+    <script 
+      src="https://cdn.mida.so/mida.js" 
+      data-project-key="34MV9Wnqd0w16BXrGNLpJw"
+      async>
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

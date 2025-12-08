@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowLeft, Briefcase } from 'lucide-react';
+import { createAutoFillHandler } from '../../utils/autoFill';
 import './ForgotPassword.css';
 
 const ForgotPassword = () => {
@@ -20,6 +21,15 @@ const ForgotPassword = () => {
     }
     setError('');
     setIsSubmitted(true);
+  };
+
+  // Auto-fill handler untuk testing/prototype
+  const autoFillEmail = (e) => {
+    if (!email) {
+      const value = 'john.doe@example.com';
+      setEmail(value);
+      setError('');
+    }
   };
 
   return (
@@ -56,6 +66,8 @@ const ForgotPassword = () => {
                     setEmail(e.target.value);
                     setError('');
                   }}
+                  onClick={autoFillEmail}
+                  onFocus={autoFillEmail}
                 />
               </div>
               {error && <span className="error-message">{error}</span>}

@@ -10,6 +10,36 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>Job Portal - Sistem Rekrutmen Digital</title>
+    
+    <!-- Mida A/B Testing Script (Place in <HEAD> for speed & no flicker) -->
+    <script type="text/javascript" async src="https://cdn.mida.so/js/optimize.js?key=34MV9Wnqd0wl6BXrGNLpJw"></script>
+    
+    <!-- Maze User Testing Script -->
+    <script>
+      (function (m, a, z, e) {
+        var s, t, u, v;
+        try {
+          t = m.sessionStorage.getItem('maze-us');
+        } catch (err) {}
+        if (!t) {
+          t = new Date().getTime();
+          try {
+            m.sessionStorage.setItem('maze-us', t);
+          } catch (err) {}
+        }
+        u = document.currentScript || (function () {
+          var w = document.getElementsByTagName('script');
+          return w[w.length - 1];
+        })();
+        v = u && u.nonce;
+        s = a.createElement('script');
+        s.src = z + '?apiKey=' + e;
+        s.async = true;
+        if (v) s.setAttribute('nonce', v);
+        a.getElementsByTagName('head')[0].appendChild(s);
+        m.mazeUniversalSnippetApiKey = e;
+      })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'accbd2a5-715c-4ec3-b470-f278943ff4b9');
+    </script>
   </head>
   <body>
     <div id="root"></div>
